@@ -1,0 +1,41 @@
+using System;
+
+namespace EX_2B
+{
+    class Program
+    {
+
+        //syntactic sugar is the simplization of a compound code into one readable method
+
+        static void Main(string[] args)
+        {
+            InstrumentSound();
+        }
+
+        /*static void InstrumentSound(string instrument = "guitar", string noise = "Strum")
+        {
+            Console.WriteLine($"The {instrument} makes a \"{noise}\" sound!");
+        }*/
+
+        static void InstrumentSound(string instrument, string noise)
+        {
+            Console.WriteLine($"The {instrument} makes a \"{noise}\" sound!");
+        }
+
+        // Calls the two-parameter method with a default sound
+         static void InstrumentSound(string instrument)
+        {
+            InstrumentSound(instrument, "strum");
+        }
+
+        // Calls the one-parameter method with a default animal
+        // OR
+        // Calls the two-parameter method with a default animal and sound
+         static void InstrumentSound()
+        {
+            InstrumentSound("guitar");
+            // OR
+            // AnimalSound("duck", "quack");
+        }
+    }
+}
